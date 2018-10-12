@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Guess Game</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
+  
+</head>
+
+<body>
+
+    <div class="jumbotron">
+
+        <h1 class="text-center">Keywords of 2018!</h1>
+            
+            <div class="text-center">
+            
+                <button id="start-game" class="btn btn-primary"><p>Click to start a new game</p></button>
+                  
+            </div>
+            
+    </div>
+
+    <div class="container">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card mb-2">
+                  <h3 class="card-header">Wins</h3>
+                  <div class="card-body text-center">
+                    <h1 id="win-number"></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-md-12">
+                      <div class="card mb-2">
+                        <h3 class="card-header">Guesses Remaining</h3>
+                        <div class="card-body text-center">
+                          <h1 id="guess-remaining"></h1>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-md-12">
+                      <div class="card mb-2">
+                        <h3 class="card-header">Keyword</h3>
+                        <div class="card-body text-center">
+                          <h1 id="keyword"></h1>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-md-12">
+                      <div class="card mb-2">
+                        <h3 class="card-header">Letters Already Guessed</h3>
+                        <div class="card-body text-center">
+                          <h1 id="already-guessed"></h1>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card mb-2">
+                  <h3 class="card-header">Moment of Truth</h3>
+                  <div class="card-body text-center">
+                    <h1 id="result"></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+    </div>
+        
+
+</body>
+
+</html>
