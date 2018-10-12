@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-var wordBase = ["trump", "tradewar", "dataprivacy", "denuclearization", "bullmarket"];
+//Variables Declaration
+
+var wordBase = ["trump", "tradewar", "dataprivacy", "meetoo", "elonmusk", "denuclearization", "bullmarket", "syria", "kavanaugh"];
 
 var wins = 0;
 
@@ -16,6 +18,8 @@ var pinpoint = [];
 
 var keyword = wordBase[n];
 
+//Print out initial output
+
 for (var j = 0; j< keyword.length; j++) {
     mirror[j] = "-";
 }
@@ -24,15 +28,20 @@ $("#keyword").text(mirror.join(""));
 $("#guess-remaining").text(remainder);
 $("#win-number").text(wins);
 
+//Functions to 'pinpoint' the index of the characters guessed in the target word.
+
 function locations(substring,string){
     var a=[],i=-1;
     while((i=string.indexOf(substring,i+1)) >= 0) a.push(i);
     return a;
 }
 
+//function to reset the page for the next keyword.
+
 function reset(){
     remainder = 15;
     trashbin = [];
+    mirror = [];
     n++;
     keyword = wordBase [n];
     for (var j = 0; j< keyword.length; j++) {
