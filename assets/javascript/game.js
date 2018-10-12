@@ -15,7 +15,9 @@ $("#win-number").text(wins);
 
 $("#start-game").on("click", function() {
 
-    var keyword = wordBase[0];
+ for (var n = 0; n < wordBase.length; n++) {
+
+    var keyword = wordBase[n];
 
     var remainder = 15;
 
@@ -42,24 +44,21 @@ $("#start-game").on("click", function() {
                 }
                 $("#keyword").text(mirror.join(""));
             }
-            else {
+            else if (trashbin.toString().includes(event.key.toLocaleLowerCase()) == false) {
                 trashbin.push(event.key.toLowerCase());
                 $("#already-guessed").text(trashbin.join(""));
                 remainder--;
                 $("#guess-remaining").text(remainder);
             }
+            else {
+                //do nothing;
+            }
         }
     } 
     
-    $("#result").text(keyword);}
-   
-    
+    $("#result").text(keyword);
 
-    
-
-
-
-
+ }
 
 });
 
